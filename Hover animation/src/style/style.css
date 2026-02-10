@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+:root{
+    --Ketchup: #CD1105;
+    --Mostarda: #FEB207;
+    --Alface: #B2CF00;
+    --Marrom: #641B09;
+    --Bege: #FFA61C;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, var(--Mostarda), var(--Ketchup));
+
+}
+
+p, h2{
+    color: var(--Alface);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+    position: relative;
+    background-color: var(--Marrom) ;
+    border-radius: 20px;
+    box-shadow: 0px 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5%;
+}
+
+.card:hover{
+    height: 400px;
+
+}
+
+.card .img-box{
+    position: absolute;
+    width: 250px;
+    height: auto;
+    top: 0px;
+    transition: 0.5%;
+}
+
+.card:hover .img-box{
+    top: -100px;
+    scale: 0.75;
+}
+
+.card .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.card .content{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    transition: 0.5%;
+}
+
+.card:hover .content{
+
+    top: 130px;
+    height: 250px;
+
+}
+
+.card .read-more{
+    background: linear-gradient(var(--Ketchup), var(--Bege));
+    padding: 12px;
+    color: var(--Marrom);
+}
